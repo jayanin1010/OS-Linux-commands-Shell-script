@@ -43,10 +43,14 @@ s.n. dasgupta
 cat < file1
 ## OUTPUT
 
-
+	this is os class
+	os class is fun!
 
 cat < file2
 ## OUTPUT
+
+	this is kali
+	feel like a hacker!
 
 
 # Comparing Files
@@ -56,9 +60,19 @@ cmp file1 file2
 comm file1 file2
  ## OUTPUT
 
+	 file1 file2 differ: byte 9, line 1
+
  
 diff file1 file2
 ## OUTPUT
+
+	1,2c1,2
+	< this is os class
+	< os class is fun!
+	---
+	> this is kali
+	> feel like a hacker!
+
 
 
 #Filters
@@ -80,20 +94,26 @@ cat > file22
 ```
 
 
-cut -c1-3 file11
+cut -c1-3 file1
 ## OUTPUT
 
+	thi
+	os 
 
 
-
-cut -d "|" -f 1 file22
+cut -d "|" -f 1 file3
 ## OUTPUT
 
+	1
+	2
+	3
 
-
-cut -d "|" -f 2 file22
+cut -d "|" -f 2 file3
 ## OUTPUT
 
+	xxx
+	yyy
+	zzz
 
 cat < newfile 
 ```
@@ -105,42 +125,175 @@ cat > newfile
 Hello world
 hello world
  
-grep Hello newfile 
+grep Hello newfile
 ## OUTPUT
 
+	Hello world
 
-
-grep hello newfile 
+grep hello newfile
 ## OUTPUT
 
-
+	hello world
 
 
 grep -v hello newfile 
 ## OUTPUT
 
+	Hello world
+	Linux is world number 1
+	Unix is predecessor
+	Linux is best in this Worls
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
+	Hello world
+	hello world
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
+	2
 
 
 grep -R ubuntu /etc
 ## OUTPUT
 
-
+	/etc/xdg/picom.conf:# Picom Configuration, courtesy of Xubuntu Developers
+	/etc/xdg/picom.conf:# https://raw.githubusercontent.com/Xubuntu/xubuntu-default-settings/master/etc/xdg/xdg-xubuntu/picom.conf
+	/etc/xdg/compton.conf:# Compton Configuration, courtesy of Xubuntu Developers
+	/etc/xdg/compton.conf:# https://raw.githubusercontent.com/Xubuntu/xubuntu-default-settings/master/etc/xdg/xdg-xubuntu/compton.conf
+	/etc/speech-dispatcher/speechd.conf:# Copyright (C) 2014-2016 Luke Yelavich <themuso@ubuntu.com>
+	/etc/speech-dispatcher/modules/espeak-mbrola-generic.conf:# Copyright (C) 2014 Luke Yelavich <themuso@ubuntu.com>
+	/etc/speech-dispatcher/modules/espeak-ng-mbrola-generic.conf:# Copyright (C) 2014 Luke Yelavich <themuso@ubuntu.com>
+	/etc/alternatives/open:         LXDE|Lubuntu)
+	grep: /etc/vpnc: Permission denied
+	grep: /etc/security/opasswd: Permission denied
+	grep: /etc/gophish/config.json: Permission denied
+	grep: /etc/ssl/private: Permission denied
+	grep: /etc/snmp/snmpd.conf: Permission denied
+	grep: /etc/sudoers.d/kali-grant-root: Permission denied
+	grep: /etc/sudoers.d/README: Permission denied
+	grep: /etc/sudoers.d/ospd-openvas: Permission denied
+	grep: /etc/openfortivpn/config: Permission denied
+	grep: /etc/openvas/gnupg: Permission denied
+	grep: /etc/mysql/debian.cnf: Permission denied
+	/etc/apparmor.d/abstractions/exo-open:#   # needed for ubuntu-* abstractions
+	/etc/apparmor.d/abstractions/exo-open:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/exo-open:#   include <abstractions/ubuntu-browsers>
+	/etc/apparmor.d/abstractions/exo-open:#   include <abstractions/ubuntu-email>
+	/etc/apparmor.d/abstractions/exo-open:  /usr/share/{xfce{,4},xubuntu}/applications/{,*.list} r,
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto:  include <abstractions/ubuntu-email>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto:  include <abstractions/ubuntu-console-email>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/mailto:  include <abstractions/ubuntu-gnome-terminal>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/text-editors:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/text-editors:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/productivity:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/productivity:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/ubuntu-integration:  # Kubuntu
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/plugins-common:  # Since all the ubuntu-browsers.d abstractions need this, just include it
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/plugins-common:  include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia:  include <abstractions/ubuntu-media-players>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia:  include <abstractions/ubuntu-bittorrent-clients>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/multimedia:  include <abstractions/ubuntu-feed-readers>
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/kde:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-browsers.d/kde:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/gvfs-open:#   # needed for ubuntu-* abstractions
+	/etc/apparmor.d/abstractions/gvfs-open:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/gvfs-open:#   include <abstractions/ubuntu-browsers>
+	/etc/apparmor.d/abstractions/gvfs-open:#   include <abstractions/ubuntu-email>
+	/etc/apparmor.d/abstractions/ubuntu-email:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-email:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-email:  include if exists <abstractions/ubuntu-email.d>
+	/etc/apparmor.d/abstractions/ubuntu-console-email:# include <abstractions/ubuntu-gnome-terminal>
+	/etc/apparmor.d/abstractions/ubuntu-console-email:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-console-email:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-console-email:  include if exists <abstractions/ubuntu-console-email.d>
+	/etc/apparmor.d/abstractions/ubuntu-media-players:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-media-players:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-media-players:  include if exists <abstractions/ubuntu-media-players.d>
+	/etc/apparmor.d/abstractions/ubuntu-console-browsers:# include <abstractions/ubuntu-gnome-terminal>
+	/etc/apparmor.d/abstractions/ubuntu-console-browsers:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-console-browsers:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-console-browsers:  include if exists <abstractions/ubuntu-console-browsers.d>
+	/etc/apparmor.d/abstractions/ubuntu-unity7-launcher:  include if exists <abstractions/ubuntu-unity7-launcher.d>
+	/etc/apparmor.d/abstractions/ubuntu-browsers:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-browsers:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/lightdm:# Author: Martin Pitt <martin.pitt@ubuntu.com>
+	/etc/apparmor.d/abstractions/lightdm:  unix (bind, listen, accept, receive, send) type=stream addr="@/com/ubuntu/upstart-session/**",
+	/etc/apparmor.d/abstractions/ubuntu-bittorrent-clients:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-bittorrent-clients:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-bittorrent-clients:  include if exists <abstractions/ubuntu-bittorrent-clients.d>
+	/etc/apparmor.d/abstractions/ubuntu-xterm:  include if exists <abstractions/ubuntu-xterm.d>
+	/etc/apparmor.d/abstractions/kde-open5:#   # needed for ubuntu-* abstractions
+	/etc/apparmor.d/abstractions/kde-open5:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/kde-open5:#   include <abstractions/ubuntu-browsers>
+	/etc/apparmor.d/abstractions/kde-open5:#   include <abstractions/ubuntu-email>
+	/etc/apparmor.d/abstractions/kde-open5:  # see: https://lists.ubuntu.com/archives/apparmor/2019-January/011925.html
+	/etc/apparmor.d/abstractions/gio-open:#   # needed for ubuntu-* abstractions
+	/etc/apparmor.d/abstractions/gio-open:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/gio-open:#   include <abstractions/ubuntu-browsers>
+	/etc/apparmor.d/abstractions/gio-open:#   include <abstractions/ubuntu-email>
+	/etc/apparmor.d/abstractions/ubuntu-unity7-base:  include if exists <abstractions/ubuntu-unity7-base.d>
+	/etc/apparmor.d/abstractions/ubuntu-konsole:  include if exists <abstractions/ubuntu-konsole.d>
+	/etc/apparmor.d/abstractions/ubuntu-unity7-messaging:  include if exists <abstractions/ubuntu-unity7-messaging.d>
+	/etc/apparmor.d/abstractions/ubuntu-helpers:  include if exists <local/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-feed-readers:# Users of this abstraction need to include the ubuntu-helpers abstraction
+	/etc/apparmor.d/abstractions/ubuntu-feed-readers:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/ubuntu-feed-readers:  include if exists <abstractions/ubuntu-feed-readers.d>
+	/etc/apparmor.d/abstractions/lightdm_chromium-browser:  /usr/bin/ubuntu-html5-app-launcher Cx -> chromium,
+	/etc/apparmor.d/abstractions/ubuntu-gnome-terminal:  include if exists <abstractions/ubuntu-gnome-terminal.d>
+	/etc/apparmor.d/abstractions/kde:/usr/share/kubuntu-default-settings/kf5-settings/* r,
+	/etc/apparmor.d/abstractions/xdg-open:#   # needed for ubuntu-* abstractions
+	/etc/apparmor.d/abstractions/xdg-open:#   include <abstractions/ubuntu-helpers>
+	/etc/apparmor.d/abstractions/xdg-open:#   include <abstractions/ubuntu-browsers>
+	/etc/apparmor.d/abstractions/xdg-open:#   include <abstractions/ubuntu-email>
+	grep: /etc/sudoers: Permission denied
+	/etc/rcS.d/S01apparmor:#  Kees Cook <kees@ubuntu.com>
+	grep: /etc/polkit-1/rules.d: Permission denied
+	grep: /etc/redis: Permission denied
+	grep: /etc/default/cacerts: Permission denied
+	grep: /etc/default/iodine: Permission denied
+	grep: /etc/pulse/client.conf.d/01-enable-autospawn.conf: No such file or directory
+	grep: /etc/ppp/chap-secrets: Permission denied
+	grep: /etc/ppp/pap-secrets: Permission denied
+	grep: /etc/credstore.encrypted: Permission denied
+	grep: /etc/shadow-: Permission denied
+	grep: /etc/postgresql/16/main/pg_hba.conf: Permission denied
+	grep: /etc/postgresql/16/main/pg_ident.conf: Permission denied
+	grep: /etc/NetworkManager/system-connections/Wired connection 1: Permission denied
+	grep: /etc/gshadow: Permission denied
+	grep: /etc/gshadow-: Permission denied
+	/etc/grub.d/05_debian_theme:            Tanglu|Ubuntu|Kubuntu)
+	/etc/grub.d/05_debian_theme:    Ubuntu|Kubuntu)
+	/etc/grub.d/10_linux:ubuntu_recovery="0"
+	/etc/grub.d/10_linux:    Ubuntu|Kubuntu)
+	/etc/grub.d/10_linux:if [ "$ubuntu_recovery" = 1 ]; then
+	/etc/grub.d/10_linux:  if ([ "$ubuntu_recovery" = 0 ] || [ x$type != xrecovery ]) && \
+	grep: /etc/ipsec.d/private: Permission denied
+	/etc/zsh/zshrc:if (( ${${(@f)"$(</etc/os-release)"}[(I)ID*=*ubuntu]} )) &&
+	grep: /etc/.pwd.lock: Permission denied
+	grep: /etc/credstore: Permission denied
+	grep: /etc/ssh/ssh_host_ecdsa_key: Permission denied
+	grep: /etc/ssh/ssh_host_ed25519_key: Permission denied
+	grep: /etc/ssh/ssh_host_rsa_key: Permission denied
+	grep: /etc/ipsec.secrets: Permission denied
+	/etc/init.d/apparmor:#  Kees Cook <kees@ubuntu.com>
+	grep: /etc/shadow: Permission denied
 
 grep -w -n world newfile   
 ## OUTPUT
 
+	1:Hello world
+	2:hello world
+	3:Linux is world number 1
 
 cat < newfile 
 ```
