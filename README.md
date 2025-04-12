@@ -43,35 +43,29 @@ s.n. dasgupta
 cat < file1
 ## OUTPUT
 
-	this is os class
-	os class is fun!
 
 cat < file2
 ## OUTPUT
 
-	this is kali
-	feel like a hacker!
+	
 
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+
+
  
 comm file1 file2
  ## OUTPUT
 
-	 file1 file2 differ: byte 9, line 1
+	
 
  
 diff file1 file2
 ## OUTPUT
 
-	1,2c1,2
-	< this is os class
-	< os class is fun!
-	---
-	> this is kali
-	> feel like a hacker!
+
 
 
 
@@ -97,23 +91,18 @@ cat > file22
 cut -c1-3 file1
 ## OUTPUT
 
-	thi
-	os 
+	
 
 
 cut -d "|" -f 1 file3
 ## OUTPUT
 
-	1
-	2
-	3
+	
 
 cut -d "|" -f 2 file3
 ## OUTPUT
 
-	xxx
-	yyy
-	zzz
+	
 
 cat < newfile 
 ```
@@ -139,10 +128,7 @@ grep hello newfile
 grep -v hello newfile 
 ## OUTPUT
 
-	Hello world
-	Linux is world number 1
-	Unix is predecessor
-	Linux is best in this Worls
+	
 
 
 cat newfile | grep -i "hello"
@@ -291,9 +277,7 @@ grep -R ubuntu /etc
 grep -w -n world newfile   
 ## OUTPUT
 
-	1:Hello world
-	2:hello world
-	3:Linux is world number 1
+	
 
 cat < newfile 
 ```
