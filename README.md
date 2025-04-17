@@ -439,14 +439,15 @@ tar -tvf backup.tar
 ## OUTPUT
 tar -xvf backup.tar
 ## OUTPUT
+![alt text](<Screenshot from 2025-04-17 13-47-40.png>)
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
+![alt text](<Screenshot from 2025-04-17 13-49-37.png>)
  
 gunzip backup.tar.gz
-## OUTPUT
 
  
 # Shell Script
@@ -907,7 +908,7 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
-
+![alt text](<Screenshot from 2025-04-17 13-02-49.png>)
 
 cat forctype.sh 
 ```bash
@@ -922,6 +923,8 @@ $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
 
+![alt text](<Screenshot from 2025-04-17 13-07-46.png>)
+
 cat forctype1.sh 
 ```bash
 #!/bin/bash
@@ -934,6 +937,7 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+![alt text](<Screenshot from 2025-04-17 13-08-49.png>)
 
 cat fornested1.sh 
 ```bash
@@ -952,7 +956,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
+![alt text](<Screenshot from 2025-04-17 13-09-48.png>)
  
 cat forbreak.sh 
 ```bash
@@ -969,12 +973,13 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
+![alt text](<Screenshot from 2025-04-17 13-11-15.png>)
 
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
  
-cat forbreak.sh 
+cat forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -989,11 +994,13 @@ done
 echo "The for loop is completed“
 ```
 
- 
+
 $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
+![alt text](<Screenshot from 2025-04-17 13-13-57.png>)
+
  
 cat exread.sh 
 ```bash
@@ -1008,7 +1015,7 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
-
+![alt text](<Screenshot from 2025-04-17 13-15-10.png>)
 
  cat exread1.sh
 ```bash
@@ -1020,7 +1027,7 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
-
+![alt text](<Screenshot from 2025-04-17 13-16-12.png>)
 
 
 $ ./exread1.sh 
@@ -1042,10 +1049,10 @@ fi
 ```
 ## OUTPUT
  ./funcex.sh 
-
+![alt text](<Screenshot from 2025-04-17 13-17-30.png>)
  
  ./funcex.sh 1 2
-
+![alt text](<Screenshot from 2025-04-17 13-18-03.png>)
  
 cat argshift.sh
 ```bash
@@ -1059,6 +1066,7 @@ $ chmod 777 argshift.sh
 
 ## OUTPUT
 $ ./argshift.sh 1 2 3
+![alt text](<Screenshot from 2025-04-17 13-19-12.png>)
  
  cat argshift1.sh
 ```bash
@@ -1089,7 +1097,7 @@ set +x
 ```
 ## OUTPUT
  ./argshift.sh 1 2 3
- 
+ ![alt text](<Screenshot from 2025-04-17 13-25-50.png>)
  
 cat > nc.awk
 ```bash
@@ -1120,6 +1128,7 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
+![alt text](<Screenshot from 2025-04-17 13-30-07.png>)
  
 cat > palindrome.sh
 ```bash
@@ -1147,7 +1156,7 @@ else
 fi
 ```
 ## OUTPUT 
-
+![alt text](<Screenshot from 2025-04-17 13-34-33.png>)
 
 # RESULT:
 The Commands are executed successfully.
